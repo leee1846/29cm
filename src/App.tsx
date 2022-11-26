@@ -1,11 +1,8 @@
 import React from 'react';
+import MainRoute from './pages/MainRoute';
 
 function App() {
-  return (
-    <div>
-      <p>테스트</p>
-    </div>
-  );
+  return <MainRoute />;
 }
 
 export default App;

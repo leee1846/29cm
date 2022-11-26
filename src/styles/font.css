@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Thin';
+  src: url('../assets/fonts/NotoSans-Thin.woff2') format('woff2'),
+    url('../assets/fonts/NotoSans-Thin.woff') format('woff'),
+    url('../assets/fonts/NotoSans-Thin.otf') format('opentype'),
+    url('../assets/fonts/NotoSans-Thin.eot?') format('eot');
+}
+@font-face {
+  font-family: 'Light';
+  src: url('../assets/fonts/NotoSans-Light.woff2') format('woff2'),
+    url('../assets/fonts/NotoSans-Light.woff') format('woff'),
+    url('../assets/fonts/NotoSans-Light.otf') format('opentype'),
+    url('../assets/fonts/NotoSans-Light.eot?') format('eot');
+}
+@font-face {
+  font-family: 'DemiLight';
+  src: url('../assets/fonts/NotoSans-DemiLight.woff2') format('woff2'),
+    url('../assets/fonts/NotoSans-DemiLight.woff') format('woff'),
+    url('../assets/fonts/NotoSans-DemiLight.otf') format('opentype'),
+    url('../assets/fonts/NotoSans-DemiLight.eot?') format('eot');
+}
+@font-face {
+  font-family: 'Regular';
+  src: url('../assets/fonts/NotoSans-Regular.woff2') format('woff2'),
+    url('../assets/fonts/NotoSans-Regular.woff') format('woff'),
+    url('../assets/fonts/NotoSans-Regular.otf') format('opentype'),
+    url('../assets/fonts/NotoSans-Regular.eot?') format('eot');
+}
+@font-face {
+  font-family: 'Medium';
+  src: url('../assets/fonts/NotoSans-Medium.woff2') format('woff2'),
+    url('../assets/fonts/NotoSans-Medium.woff') format('woff'),
+    url('../assets/fonts/NotoSans-Medium.otf') format('opentype'),
+    url('../assets/fonts/NotoSans-Medium.eot?') format('eot');
+}
+@font-face {
+  font-family: 'Black';
+  src: url('../assets/fonts/NotoSans-Black.woff2') format('woff2'),
+    url('../assets/fonts/NotoSans-Black.woff') format('woff'),
+    url('../assets/fonts/NotoSans-Black.otf') format('opentype'),
+    url('../assets/fonts/NotoSans-Black.eot?') format('eot');
+}
+@font-face {
+  font-family: 'Bold';
+  src: url('../assets/fonts/NotoSans-Bold.woff2') format('woff2'),
+    url('../assets/fonts/NotoSans-Bold.woff') format('woff'),
+    url('../assets/fonts/NotoSans-Bold.otf') format('opentype'),
+    url('../assets/fonts/NotoSans-Bold.eot?') format('eot');
+}

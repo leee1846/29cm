@@ -8,9 +8,9 @@
       "@datas/*": ["./datas/*"],
       "@pages/*": ["./pages/*"],
       "@styles/*": ["./styles/*"],
+      "@interfaces/*": ["./types/*"],
       "@constants/*": ["./constants/*"],
       "@hooks/*": ["./hooks/*"],
-      "@interfaces/*": ["./types/*"],
       "@utils/*": ["./utils/*"],
       "@zustand/*": ["./zustand/*"]
     }

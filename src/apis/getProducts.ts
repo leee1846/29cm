@@ -1,4 +1,5 @@
-import productItems from '@datas/productItems';
+import productItems, { TProductItems } from '@datas/productItems';
+import { IPage } from '@interfaces/common/page';
 
 interface IGetProducts {
   params: {
@@ -6,24 +7,31 @@ interface IGetProducts {
     size: number;
   };
 }
-const getProducts = ({ params }: IGetProducts) => {
+interface IGetProductsReturn {
+  contents: TProductItems;
+  page: IPage;
+}
+const getProducts = ({ params }: IGetProducts): IGetProductsReturn => {
   const { page, size } = params;
+  const data = productItems;
 
-  const totalElements = productItems.length;
+  const totalElements = data.length;
   const totalPages = Math.ceil(totalElements / size);
 
   const lastContent = page * size;
   const firstContent = lastContent - size;
-  const contents = productItems.slice(firstContent, lastContent);
+  const contents = data.slice(firstContent, lastContent);
 
-  const hasNext = !!(contents.length >= size || productItems[lastContent + 1]);
+  const hasNext = !!(contents.length >= size || data[lastContent + 1]);
 
   return {
     contents,
     page: {
+      currentPage: page,
       totalPages,
       totalElements,
       hasNext,
+      size,
     },
   };
 };

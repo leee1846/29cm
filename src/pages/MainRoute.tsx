@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
+import LoadingSpinner from '@components/Global/Loading';
 
 const ProductsPage = lazy(() => import('./ProductsPage'));
 const CartPage = lazy(() => import('./Cart'));
@@ -7,7 +8,7 @@ const CartPage = lazy(() => import('./Cart'));
 const MainRoute = () => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>로딩중...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           <Route path="/" element={<Navigate to="/products" />} />
           <Route path="/products" element={<ProductsPage />} />

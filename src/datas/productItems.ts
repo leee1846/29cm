@@ -1,4 +1,4 @@
-type TProductItems = {
+export type TProductItems = {
   item_no: number;
   item_name: string;
   detail_image_url: string;
@@ -106,6 +106,438 @@ const productItems: TProductItems = [
       'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
     price: 3000,
     score: 220,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
+  },
+  {
+    item_no: 1,
+    item_name: 'WOOD GLOVES',
+    detail_image_url:
+      'https://img.29cm.co.kr/next-product/2019/04/25/4fe7eda3069d4cdb867636faf36ad5a3_20190425135058.jpg?width=500',
+    price: 2,
+    score: 3,
   },
 ];
 

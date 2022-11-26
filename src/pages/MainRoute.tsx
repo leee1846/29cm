@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 
 const ProductsPage = lazy(() => import('./ProductsPage'));
-const ProductPage = lazy(() => import('./ProductPage'));
+const CartPage = lazy(() => import('./Cart'));
 
 const MainRoute = () => {
   return (
@@ -11,7 +11,7 @@ const MainRoute = () => {
         <Routes>
           <Route path="/" element={<Navigate to="/products" />} />
           <Route path="/products" element={<ProductsPage />} />
-          <Route path="/products/:productSeq" element={<ProductPage />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

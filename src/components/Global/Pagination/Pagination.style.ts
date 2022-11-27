@@ -4,6 +4,7 @@ export const Pagination = styled.div`
   display: flex;
   align-items: center;
   gap: 15px;
+  margin: 0 auto;
 `;
 
 interface IPage {

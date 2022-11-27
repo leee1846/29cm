@@ -1,6 +1,8 @@
 import React from 'react';
 import { IPage } from '@interfaces/common/page';
 import { getPager } from '@utils/pageUtil';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { objectToQueryString, queryStringToObj } from '@utils/stringUtil';
 import * as S from './Pagination.style';
 
 interface IPagination {
@@ -15,16 +17,33 @@ const Pagination = ({ pageData, pagePerBundle }: IPagination) => {
     totalPages,
   });
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
+  const location = useLocation();
+  const queryStringObj = queryStringToObj<any>(location.search);
+  const navigate = useNavigate();
   const onClickPrev = () => {
     if (currentPage > 1) {
-      console.log(currentPage);
+      const queryString = objectToQueryString({ ...queryStringObj, page: currentPage - 1 });
+      navigate(`/products?${queryString}`);
+      scrollToTop();
     }
   };
 
   const onClickNext = () => {
     if (hasNext) {
-      console.log(hasNext);
+      const queryString = objectToQueryString({ ...queryStringObj, page: currentPage + 1 });
+      navigate(`/products?${queryString}`);
+      scrollToTop();
     }
+  };
+
+  const onClickPage = (page: number) => {
+    const queryString = objectToQueryString({ ...queryStringObj, page });
+    navigate(`/products?${queryString}`);
+    scrollToTop();
   };
   return (
     <S.Pagination>
@@ -32,7 +51,12 @@ const Pagination = ({ pageData, pagePerBundle }: IPagination) => {
         〈
       </button>
       {pager.pages.map(page => (
-        <S.Page type="button" active={currentPage === page}>
+        <S.Page
+          type="button"
+          key={page}
+          active={currentPage === page}
+          onClick={() => onClickPage(page)}
+        >
           {page}
         </S.Page>
       ))}

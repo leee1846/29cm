@@ -19,5 +19,12 @@ module.exports = {
     'react/require-default-props': 'off',
     'class-methods-use-this': 'off',
     'no-console': 'off',
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "enumMember",
+        "format": ["camelCase", "UPPER_CASE"]
+      }
+    ]
   },
 };

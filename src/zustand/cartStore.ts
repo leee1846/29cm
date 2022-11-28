@@ -1,51 +1,51 @@
 import create from 'zustand';
 import { IProductItem, TProductItems } from '@datas/productItems';
-import { BASKET_KEY } from '@constants/keys';
+import { CART_KEY } from '@constants/keys';
 
-interface IBasketStore {
+interface ICartStore {
   state: {
     items: TProductItems | null;
   };
-  setBaskets: (productData: IProductItem) => void;
-  removeBasket: (productNo: number) => void;
+  setCartList: (productData: IProductItem) => void;
+  removeCartItem: (productNo: number) => void;
 }
 
-const basketStore = create<IBasketStore>(set => ({
+const cartStore = create<ICartStore>(set => ({
   state: {
     items: (() => {
-      const basketData = sessionStorage.getItem(BASKET_KEY);
+      const basketData = sessionStorage.getItem(CART_KEY);
       if (basketData) {
         return JSON.parse(basketData);
       }
       return null;
     })(),
   },
-  setBaskets: productData => {
+  setCartList: productData => {
     set(store => {
       if (store.state.items) {
-        const newBasketItems = [...store.state.items, productData];
-        sessionStorage.setItem(BASKET_KEY, JSON.stringify(newBasketItems));
+        const newCartList = [...store.state.items, productData];
+        sessionStorage.setItem(CART_KEY, JSON.stringify(newCartList));
         return {
           ...store,
           state: {
             ...store.state,
-            items: newBasketItems,
+            items: newCartList,
           },
         };
       }
 
-      const newBasketItem = [productData];
-      sessionStorage.setItem(BASKET_KEY, JSON.stringify(newBasketItem));
+      const newCartItem = [productData];
+      sessionStorage.setItem(CART_KEY, JSON.stringify(newCartItem));
       return {
         ...store,
         state: {
           ...store.state,
-          items: newBasketItem,
+          items: newCartItem,
         },
       };
     });
   },
-  removeBasket: productNo => {
+  removeCartItem: productNo => {
     set(store => {
       if (
         store.state.items === null ||
@@ -55,17 +55,17 @@ const basketStore = create<IBasketStore>(set => ({
         return store;
       }
 
-      const newBasketItem = store.state.items.filter(item => item.item_no !== productNo);
-      sessionStorage.setItem(BASKET_KEY, JSON.stringify(newBasketItem));
+      const newCartItem = store.state.items.filter(item => item.item_no !== productNo);
+      sessionStorage.setItem(CART_KEY, JSON.stringify(newCartItem));
       return {
         ...store,
         state: {
           ...store.state,
-          items: newBasketItem,
+          items: newCartItem,
         },
       };
     });
   },
 }));
 
-export default basketStore;
+export default cartStore;

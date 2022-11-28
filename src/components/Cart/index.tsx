@@ -1,9 +1,10 @@
 import React from 'react';
+import CartList from '@components/Cart/CartList';
 
 const Cart = () => {
   return (
     <div>
-      <p>카트</p>
+      <CartList />
     </div>
   );
 };

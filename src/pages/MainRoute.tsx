@@ -3,7 +3,7 @@ import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 import LoadingSpinner from '@components/Global/Loading';
 
 const ProductsPage = lazy(() => import('./ProductsPage'));
-const CartPage = lazy(() => import('./Cart'));
+const CartPage = lazy(() => import('./CartPage'));
 
 const MainRoute = () => {
   return (

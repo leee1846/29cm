@@ -1,1 +1,1 @@
-export const BASKET_KEY = '29cm_basket';
+export const CART_KEY = '29cm_basket';

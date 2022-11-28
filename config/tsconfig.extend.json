@@ -5,14 +5,14 @@
       "@apis/*": ["./apis/*"],
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
+      "@constants/*": ["./constants/*"],
       "@datas/*": ["./datas/*"],
       "@pages/*": ["./pages/*"],
       "@styles/*": ["./styles/*"],
       "@interfaces/*": ["./types/*"],
-      "@constants/*": ["./constants/*"],
-      "@hooks/*": ["./hooks/*"],
       "@utils/*": ["./utils/*"],
-      "@zustand/*": ["./zustand/*"]
+      "@zustand/*": ["./zustand/*"],
+      "@hooks/*": ["./hooks/*"]
     }
   }
 }

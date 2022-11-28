@@ -40,10 +40,13 @@ export const Price = styled.p`
   font-size: 16px;
 `;
 
-export const BasketBtn = styled.button`
-  border: 1px solid dodgerblue;
+interface IBasketBtn {
+  character: 'positive' | 'negative';
+}
+export const BasketBtn = styled.button<IBasketBtn>`
+  border: 1px solid ${({ character }) => (character === 'positive' ? 'dodgerblue' : 'crimson')};
   padding: 4px;
-  background: aliceblue;
+  background: ${({ character }) => (character === 'positive' ? 'aliceblue' : 'lightpink')};
   border-radius: 4px;
   font-family: Medium, sans-serif;
 `;

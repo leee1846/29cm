@@ -1,9 +1,10 @@
-type TCoupons = {
-  type: string;
+export interface ICoupon {
+  type: 'amount' | 'rate';
   title: string;
   discountRate?: number;
   discountAmount?: number;
-}[];
+}
+type TCoupons = ICoupon[];
 
 const coupons: TCoupons = [
   {

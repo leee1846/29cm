@@ -1,13 +1,19 @@
 import create from 'zustand';
-import { IProductItem, TProductItems } from '@datas/productItems';
+import { IProductItem } from '@datas/productItems';
 import { CART_KEY } from '@constants/keys';
 
+interface ICartItem extends IProductItem {
+  check: boolean;
+  amount: number;
+}
 interface ICartStore {
   state: {
-    items: TProductItems | null;
+    items: ICartItem[] | null;
   };
   setCartList: (productData: IProductItem) => void;
   removeCartItem: (productNo: number) => void;
+  setCartCheck: (productNo: number) => void;
+  setCartAmount: ({ productNo, amount }: { productNo: number; amount: number }) => void;
 }
 
 const cartStore = create<ICartStore>(set => ({
@@ -23,7 +29,7 @@ const cartStore = create<ICartStore>(set => ({
   setCartList: productData => {
     set(store => {
       if (store.state.items) {
-        const newCartList = [...store.state.items, productData];
+        const newCartList = [...store.state.items, { ...productData, check: true, amount: 1 }];
         sessionStorage.setItem(CART_KEY, JSON.stringify(newCartList));
         return {
           ...store,
@@ -34,7 +40,7 @@ const cartStore = create<ICartStore>(set => ({
         };
       }
 
-      const newCartItem = [productData];
+      const newCartItem = [{ ...productData, check: true, amount: 1 }];
       sessionStorage.setItem(CART_KEY, JSON.stringify(newCartItem));
       return {
         ...store,
@@ -62,6 +68,59 @@ const cartStore = create<ICartStore>(set => ({
         state: {
           ...store.state,
           items: newCartItem,
+        },
+      };
+    });
+  },
+  setCartCheck: productNo => {
+    set(store => {
+      if (
+        store.state.items === null ||
+        store.state.items.length < 1 ||
+        !store.state.items.some(item => item.item_no === productNo)
+      ) {
+        return store;
+      }
+
+      const newCartItems = store.state.items.map(item => {
+        if (item.item_no === productNo) {
+          return { ...item, check: !item.check };
+        }
+        return item;
+      });
+
+      sessionStorage.setItem(CART_KEY, JSON.stringify(newCartItems));
+      return {
+        ...store,
+        state: {
+          ...store.state,
+          items: newCartItems,
+        },
+      };
+    });
+  },
+  setCartAmount: ({ productNo, amount }) => {
+    set(store => {
+      if (
+        store.state.items === null ||
+        store.state.items.length < 1 ||
+        !store.state.items.some(item => item.item_no === productNo)
+      ) {
+        return store;
+      }
+
+      const newCartItems = store.state.items.map(item => {
+        if (item.item_no === productNo) {
+          return { ...item, amount };
+        }
+        return item;
+      });
+      sessionStorage.setItem(CART_KEY, JSON.stringify(newCartItems));
+      return {
+        ...store,
+        state: {
+          ...store.state,
+          items: newCartItems,
         },
       };
     });

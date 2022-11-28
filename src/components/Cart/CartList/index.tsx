@@ -1,19 +1,35 @@
 import React from 'react';
 import cartStore from '@zustand/cartStore';
 import ProductItem from '@components/Global/ProductItem';
+import CartButton from '@components/Global/Cart/CartButton';
+import * as S from './CartList.style';
 
 const CartList = () => {
   const cartList = cartStore(store => store.state.items);
+  const removeCartItem = cartStore(store => store.removeCartItem);
+  const onChangeCheck = cartStore(store => store.setCartCheck);
 
-  if (!cartList) {
-    return null;
+  const onDeleteCartItem = (productNo: number) => {
+    removeCartItem(productNo);
+  };
+
+  if (!cartList || cartList.length < 1) {
+    return <p>장바구니가 비어있습니다.</p>;
   }
   return (
-    <div>
+    <S.CartList>
       {cartList.map(cartItem => (
-        <ProductItem productData={cartItem} key={cartItem.item_no} />
+        <S.CartItem key={cartItem.item_no}>
+          <ProductItem productData={cartItem} />
+          <CartButton character="negative" onClick={() => onDeleteCartItem(cartItem.item_no)} />
+          <input
+            type="checkbox"
+            checked={cartItem.check}
+            onChange={() => onChangeCheck(cartItem.item_no)}
+          />
+        </S.CartItem>
       ))}
-    </div>
+    </S.CartList>
   );
 };
 

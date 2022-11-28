@@ -2,6 +2,7 @@ import React from 'react';
 import { IProductItem } from '@datas/productItems';
 import cartStore from '@zustand/cartStore';
 import ProductItem from '@components/Global/ProductItem';
+import CartButton from '@components/Global/Cart/CartButton';
 import * as S from './Product.style';
 
 interface IProduct {
@@ -32,13 +33,9 @@ const Product = ({ productData }: IProduct) => {
     <S.Product>
       <ProductItem productData={productData} />
       {isInBasket ? (
-        <S.BasketBtn type="button" character="negative" onClick={removeItem}>
-          - 장바구니에서 빼기
-        </S.BasketBtn>
+        <CartButton character="negative" onClick={removeItem} />
       ) : (
-        <S.BasketBtn type="button" character="positive" onClick={addItem}>
-          + 장바구니에 담기
-        </S.BasketBtn>
+        <CartButton character="positive" onClick={addItem} />
       )}
     </S.Product>
   );

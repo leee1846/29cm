@@ -16,9 +16,7 @@ const GlobalStyles = createGlobalStyle`
   button, a, label,input[type="button"], input[type="checkbox"], input[type="radio"], select {
     cursor: pointer;
   }
-  input[type="checkbox"], input[type="radio"]{
-    display: none;
-  }
+
   
   button {
     padding: 0;

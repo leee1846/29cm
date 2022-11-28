@@ -2,7 +2,7 @@ import create from 'zustand';
 import { IProductItem } from '@datas/productItems';
 import { CART_KEY } from '@constants/keys';
 
-interface ICartItem extends IProductItem {
+export interface ICartItem extends IProductItem {
   check: boolean;
   amount: number;
 }

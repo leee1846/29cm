@@ -2,6 +2,7 @@ import React from 'react';
 import cartStore from '@zustand/cartStore';
 import ProductItem from '@components/Global/ProductItem';
 import CartButton from '@components/Global/Cart/CartButton';
+import AmountSelectBox from '@components/Cart/CartList/AmountSelectBox';
 import * as S from './CartList.style';
 
 const CartList = () => {
@@ -21,7 +22,10 @@ const CartList = () => {
       {cartList.map(cartItem => (
         <S.CartItem key={cartItem.item_no}>
           <ProductItem productData={cartItem} />
-          <CartButton character="negative" onClick={() => onDeleteCartItem(cartItem.item_no)} />
+          <S.Container>
+            <AmountSelectBox cartData={cartItem} />
+            <CartButton character="negative" onClick={() => onDeleteCartItem(cartItem.item_no)} />
+          </S.Container>
           <input
             type="checkbox"
             checked={cartItem.check}

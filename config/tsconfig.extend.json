@@ -8,6 +8,7 @@
       "@constants/*": ["./constants/*"],
       "@datas/*": ["./datas/*"],
       "@pages/*": ["./pages/*"],
+      "@queries/*": ["./queries/*"],
       "@styles/*": ["./styles/*"],
       "@interfaces/*": ["./types/*"],
       "@utils/*": ["./utils/*"],

@@ -2,14 +2,15 @@ import productItems, { TProductItems } from '@datas/productItems';
 import { IPage } from '@interfaces/common/page';
 
 export type TScore = 'asc' | 'desc';
-interface IGetProducts {
-  params: {
-    page: number;
-    size: number;
-    score?: TScore;
-  };
+export interface IGetProductsParams {
+  page: number;
+  size: number;
+  score?: TScore;
 }
-interface IGetProductsReturn {
+export interface IGetProducts {
+  params: IGetProductsParams;
+}
+export interface IGetProductsReturn {
   contents: TProductItems;
   page: IPage;
 }

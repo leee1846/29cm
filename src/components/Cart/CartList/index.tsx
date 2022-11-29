@@ -15,7 +15,7 @@ const CartList = () => {
   };
 
   if (!cartList || cartList.length < 1) {
-    return <p>장바구니가 비어있습니다.</p>;
+    return <S.NoContent>장바구니가 비어있습니다.</S.NoContent>;
   }
   return (
     <S.CartList>

@@ -31,7 +31,10 @@ const TotalPrice = () => {
 
   return (
     <S.TotalPrice>
-      <CouponSelectBox selectedCoupon={selectedCoupon} setSelectedCoupon={setSelectedCoupon} />
+      <S.PriceContainer>
+        <p>쿠폰 선택</p>
+        <CouponSelectBox selectedCoupon={selectedCoupon} setSelectedCoupon={setSelectedCoupon} />
+      </S.PriceContainer>
       <S.PriceContainer>
         <p>총 상품 가격</p>
         <p>{withComma(checkedCartListPrice)}원</p>

@@ -4,7 +4,7 @@ export interface ICoupon {
   discountRate?: number;
   discountAmount?: number;
 }
-type TCoupons = ICoupon[];
+export type TCoupons = ICoupon[];
 
 const coupons: TCoupons = [
   {
